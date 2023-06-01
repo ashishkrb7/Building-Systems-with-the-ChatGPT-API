@@ -1,5 +1,3 @@
-[Documentation](https://ashishkrb7.github.io/Building-Systems-with-the-ChatGPT-API/)
-
 # Building Systems with the ChatGPT API
 
 Welcome to the "Building Systems with the ChatGPT API" project! This project aims to demonstrate how to leverage the power of the ChatGPT API to build interactive chat-based systems and applications.
