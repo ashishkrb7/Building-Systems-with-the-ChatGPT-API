@@ -9,7 +9,7 @@ copyright: "Copyright &copy; 2023 Ashish Kumar"
 
 nav:
   - Introduction: index.md
-  - Language Models, the Chat Format and Tokens: Language Models, the Chat Format and Tokens.md
+  - ChatGPT usage: Language Models, the Chat Format and Tokens.md
   - Contact: contact.md
 
 theme:
