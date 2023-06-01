@@ -2,9 +2,6 @@ site_name: Building Systems with the ChatGPT API
 site_description: Building Systems with the ChatGPT API
 site_author: Ashish Kumar
 
-repo_url: https://github.com/ashishkrb7/Building-Systems-with-the-ChatGPT-API
-edit_uri: edit/main/docs/
-
 copyright: "Copyright &copy; 2023 Ashish Kumar"
 
 nav:
