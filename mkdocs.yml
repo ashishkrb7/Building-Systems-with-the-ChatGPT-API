@@ -1,0 +1,74 @@
+site_name: Building Systems with the ChatGPT API
+site_description: Building Systems with the ChatGPT API
+site_author: Ashish Kumar
+
+repo_url: https://github.com/ashishkrb7/Building-Systems-with-the-ChatGPT-API.git
+edit_uri: edit/main/docs/
+
+copyright: "Copyright &copy; 2023 Ashish Kumar"
+
+nav:
+  - Introduction: index.md
+  - Language Models, the Chat Format and Tokens: Language Models, the Chat Format and Tokens.md
+  - Contact: contact.md
+
+theme:
+  name: material
+  favicon: images/favicon.ico
+  logo: images/chatgpt-logo.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/git-alt
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html
+  - meta
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.superfences
+  - pymdownx.details
+
+plugins:
+  - search
+  - autorefs
+  - glightbox
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: True
+      css_style:
+        width: "50%"
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/ashishkrb7/
+  generator: false
+
+watch:
+  - docs
+  - mkdocs.yml

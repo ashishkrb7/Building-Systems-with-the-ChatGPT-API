@@ -1,0 +1,5 @@
+python-dotenv
+openai
+redlines
+panel
+jupyter_bokeh
