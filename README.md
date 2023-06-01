@@ -1,4 +1,3 @@
-
 # Building Systems with the ChatGPT API
 
 [Documentation](https://ashishkrb7.github.io/Building-Systems-with-the-ChatGPT-API/)
