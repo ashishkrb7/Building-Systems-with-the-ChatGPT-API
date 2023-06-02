@@ -2,7 +2,7 @@
 
 ## Setup
 #### Load the API key and relevant Python libaries.
-In this course, we've provided some code that loads the OpenAI API key for you.
+Some code that loads the OpenAI API key for you.
 
 
 ```python
