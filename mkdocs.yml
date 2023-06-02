@@ -9,6 +9,9 @@ nav:
   - ChatGPT usage: Language Models, the Chat Format and Tokens.md
   - Classification: Classification.md
   - Prompt Injection: Prompt Injection.md
+  - Chain of Throught Reasoning: Chain of Throught Reasoning.md
+  - Chaining Prompts : Chaining Prompts.md
+  - Check Outputs : Check Outputs.md
   - Contact: contact.md
 
 theme:
