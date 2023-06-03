@@ -1,0 +1,1033 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Building Systems with the ChatGPT API">
+      
+      
+        <meta name="author" content="Ashish Kumar">
+      
+      
+      
+        <link rel="prev" href="../Evaluation%201/">
+      
+      
+        <link rel="next" href="../contact/">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+    
+    
+      
+        <title>Evaluation 2 - Building Systems with the ChatGPT API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evaluation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Building Systems with the ChatGPT API" class="md-header__button md-logo" aria-label="Building Systems with the ChatGPT API" data-md-component="logo">
+      
+  <img src="../images/chatgpt-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Systems with the ChatGPT API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evaluation 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Language%20Models%2C%20the%20Chat%20Format%20and%20Tokens/" class="md-tabs__link">
+      ChatGPT usage
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Classification/" class="md-tabs__link">
+      Classification
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Prompt%20Injection/" class="md-tabs__link">
+      Prompt Injection
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Chain%20of%20Throught%20Reasoning/" class="md-tabs__link">
+      Chain of Throught Reasoning
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Chaining%20Prompts/" class="md-tabs__link">
+      Chaining Prompts
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Check%20Outputs/" class="md-tabs__link">
+      Check Outputs
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../AI%20Assitant/" class="md-tabs__link">
+      AI Assitant
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Evaluation%201/" class="md-tabs__link md-tabs__link--active">
+        Evaluation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../contact/" class="md-tabs__link">
+      Contact
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Building Systems with the ChatGPT API" class="md-nav__button md-logo" aria-label="Building Systems with the ChatGPT API" data-md-component="logo">
+      
+  <img src="../images/chatgpt-logo.png" alt="logo">
+
+    </a>
+    Building Systems with the ChatGPT API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Language%20Models%2C%20the%20Chat%20Format%20and%20Tokens/" class="md-nav__link">
+        ChatGPT usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prompt%20Injection/" class="md-nav__link">
+        Prompt Injection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chain%20of%20Throught%20Reasoning/" class="md-nav__link">
+        Chain of Throught Reasoning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chaining%20Prompts/" class="md-nav__link">
+        Chaining Prompts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Check%20Outputs/" class="md-nav__link">
+        Check Outputs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%20Assitant/" class="md-nav__link">
+        AI Assitant
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Evaluation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Evaluation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Evaluation%201/" class="md-nav__link">
+        Evaluation 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Evaluation 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Evaluation 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-the-api-key-and-relevant-python-libaries" class="md-nav__link">
+    Load the API key and relevant Python libaries.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-through-the-end-to-end-system-to-answer-the-user-query" class="md-nav__link">
+    Run through the end-to-end system to answer the user query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-llms-answer-to-the-user-with-a-rubric-based-on-the-extracted-product-information" class="md-nav__link">
+    Evaluate the LLM's answer to the user with a rubric, based on the extracted product information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-llms-answer-to-the-user-based-on-an-ideal-expert-human-generated-answer" class="md-nav__link">
+    Evaluate the LLM's answer to the user based on an "ideal" / "expert" (human generated) answer.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-the-llms-response-agrees-with-or-disagrees-with-the-expert-answer" class="md-nav__link">
+    Check if the LLM's response agrees with or disagrees with the expert answer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-the-api-key-and-relevant-python-libaries" class="md-nav__link">
+    Load the API key and relevant Python libaries.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-through-the-end-to-end-system-to-answer-the-user-query" class="md-nav__link">
+    Run through the end-to-end system to answer the user query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-llms-answer-to-the-user-with-a-rubric-based-on-the-extracted-product-information" class="md-nav__link">
+    Evaluate the LLM's answer to the user with a rubric, based on the extracted product information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-llms-answer-to-the-user-based-on-an-ideal-expert-human-generated-answer" class="md-nav__link">
+    Evaluate the LLM's answer to the user based on an "ideal" / "expert" (human generated) answer.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-the-llms-response-agrees-with-or-disagrees-with-the-expert-answer" class="md-nav__link">
+    Check if the LLM's response agrees with or disagrees with the expert answer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="evaluation">Evaluation</h1>
+<p>Evaluate LLM responses when there is a single "right answer".</p>
+<h2 id="setup">Setup</h2>
+<h4 id="load-the-api-key-and-relevant-python-libaries">Load the API key and relevant Python libaries.</h4>
+<p>Some code that loads the OpenAI API key for you.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">openai</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>  <span class="c1"># GUI</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span> <span class="c1"># read local .env file</span>
+
+<span class="n">openai</span><span class="o">.</span><span class="n">api_type</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_type"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_base"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_version"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"OPENAI_API_KEY"</span><span class="p">)</span>
+</code></pre></div>
+<style>.bk-root, .bk-root .bk:before, .bk-root .bk:after {
+  font-family: var(--jp-ui-font-size1);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--jp-ui-font-color1);
+}
+</style>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"chatgpt-gpt35-turbo"</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">engine</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span> 
+        <span class="n">max_tokens</span><span class="o">=</span><span class="n">max_tokens</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="run-through-the-end-to-end-system-to-answer-the-user-query">Run through the end-to-end system to answer the user query</h3>
+<p>These helper functions are running the chain of prompts that you saw in the earlier videos.</p>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">tell me about the smartx pro phone and the fotosnap camera, the dslr one.</span>
+<span class="s2">Also, what TVs or TV related products do you have?"""</span>
+
+<span class="n">products_by_category</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_products_from_query</span><span class="p">(</span><span class="n">customer_msg</span><span class="p">)</span>
+<span class="n">category_and_product_list</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">read_string_to_list</span><span class="p">(</span><span class="n">products_by_category</span><span class="p">)</span>
+<span class="n">product_info</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_mentioned_product_info</span><span class="p">(</span><span class="n">category_and_product_list</span><span class="p">)</span>
+<span class="n">assistant_answer</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">answer_user_msg</span><span class="p">(</span><span class="n">user_msg</span><span class="o">=</span><span class="n">customer_msg</span><span class="p">,</span>
+                                                   <span class="n">product_info</span><span class="o">=</span><span class="n">product_info</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">assistant_answer</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Sure, I'd be happy to help! The SmartX ProPhone is a powerful smartphone with a 6.1-inch display, 128GB storage, 12MP dual camera, and 5G capabilities. The FotoSnap DSLR Camera is a versatile camera with a 24.2MP sensor, 1080p video, 3-inch LCD, and interchangeable lenses. As for TVs and TV-related products, we have a variety of options including the CineView 4K TV with a 55-inch display, HDR, and smart TV capabilities, the CineView 8K TV with an 8K resolution and a 65-inch display, and the CineView OLED TV with a 55-inch display and true blacks. We also have the SoundMax Home Theater system with a 5.1 channel and 1000W output, and the SoundMax Soundbar with a 2.1 channel and 300W output. Do you have any specific questions about these products or are you looking for any particular features?
+</code></pre>
+<h3 id="evaluate-the-llms-answer-to-the-user-with-a-rubric-based-on-the-extracted-product-information">Evaluate the LLM's answer to the user with a rubric, based on the extracted product information</h3>
+<div class="highlight"><pre><span></span><code><span class="n">cust_prod_info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'customer_msg'</span><span class="p">:</span> <span class="n">customer_msg</span><span class="p">,</span>
+    <span class="s1">'context'</span><span class="p">:</span> <span class="n">product_info</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">eval_with_rubric</span><span class="p">(</span><span class="n">test_set</span><span class="p">,</span> <span class="n">assistant_answer</span><span class="p">):</span>
+
+    <span class="n">cust_msg</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span><span class="s1">'customer_msg'</span><span class="p">]</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span><span class="s1">'context'</span><span class="p">]</span>
+    <span class="n">completion</span> <span class="o">=</span> <span class="n">assistant_answer</span>
+
+    <span class="n">system_message</span> <span class="o">=</span> <span class="s2">"""</span><span class="se">\</span>
+<span class="s2">    You are an assistant that evaluates how well the customer service agent </span><span class="se">\</span>
+<span class="s2">    answers a user question by looking at the context that the customer service </span><span class="se">\</span>
+<span class="s2">    agent is using to generate its response. </span>
+<span class="s2">    """</span>
+
+    <span class="n">user_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span><span class="se">\</span>
+<span class="s2">You are evaluating a submitted answer to a question based on the context </span><span class="se">\</span>
+<span class="s2">that the agent uses to answer the question.</span>
+<span class="s2">Here is the data:</span>
+<span class="s2">    [BEGIN DATA]</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Question]: </span><span class="si">{</span><span class="n">cust_msg</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Context]: </span><span class="si">{</span><span class="n">context</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Submission]: </span><span class="si">{</span><span class="n">completion</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [END DATA]</span>
+
+<span class="s2">Compare the factual content of the submitted answer with the context. </span><span class="se">\</span>
+<span class="s2">Ignore any differences in style, grammar, or punctuation.</span>
+<span class="s2">Answer the following questions:</span>
+<span class="s2">    - Is the Assistant response based only on the context provided? (Y or N)</span>
+<span class="s2">    - Does the answer include information that is not provided in the context? (Y or N)</span>
+<span class="s2">    - Is there any disagreement between the response and the context? (Y or N)</span>
+<span class="s2">    - Count how many questions the user asked. (output a number)</span>
+<span class="s2">    - For each question that the user asked, is there a corresponding answer to it?</span>
+<span class="s2">      Question 1: (Y or N)</span>
+<span class="s2">      Question 2: (Y or N)</span>
+<span class="s2">      ...</span>
+<span class="s2">      Question N: (Y or N)</span>
+<span class="s2">    - Of the number of questions asked, how many of these questions were addressed by the answer? (output a number)</span>
+<span class="s2">"""</span>
+
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span> <span class="s1">'system'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">system_message</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span> <span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">user_message</span><span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">evaluation_output</span> <span class="o">=</span> <span class="n">eval_with_rubric</span><span class="p">(</span><span class="n">cust_prod_info</span><span class="p">,</span> <span class="n">assistant_answer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">evaluation_output</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>- Is the Assistant response based only on the context provided? (Y or N)
+
+  Y
+
+- Does the answer include information that is not provided in the context? (Y or N)
+
+  N
+
+- Is there any disagreement between the response and the context? (Y or N)
+
+  N
+
+- Count how many questions the user asked. (output a number)
+
+  2
+
+- For each question that the user asked, is there a corresponding answer to it?
+
+  Question 1: Y
+  Question 2: Y
+
+- Of the number of questions asked, how many of these questions were addressed by the answer? (output a number)
+
+  2
+</code></pre>
+<h3 id="evaluate-the-llms-answer-to-the-user-based-on-an-ideal-expert-human-generated-answer">Evaluate the LLM's answer to the user based on an "ideal" / "expert" (human generated) answer.</h3>
+<div class="highlight"><pre><span></span><code><span class="n">test_set_ideal</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'customer_msg'</span><span class="p">:</span> <span class="s2">"""</span><span class="se">\</span>
+<span class="s2">tell me about the smartx pro phone and the fotosnap camera, the dslr one.</span>
+<span class="s2">Also, what TVs or TV related products do you have?"""</span><span class="p">,</span>
+    <span class="s1">'ideal_answer'</span><span class="p">:</span><span class="s2">"""</span><span class="se">\</span>
+<span class="s2">Of course!  The SmartX ProPhone is a powerful </span><span class="se">\</span>
+<span class="s2">smartphone with advanced camera features. </span><span class="se">\</span>
+<span class="s2">For instance, it has a 12MP dual camera. </span><span class="se">\</span>
+<span class="s2">Other features include 5G wireless and 128GB storage. </span><span class="se">\</span>
+<span class="s2">It also has a 6.1-inch display.  The price is $899.99.</span>
+
+<span class="s2">The FotoSnap DSLR Camera is great for </span><span class="se">\</span>
+<span class="s2">capturing stunning photos and videos. </span><span class="se">\</span>
+<span class="s2">Some features include 1080p video, </span><span class="se">\</span>
+<span class="s2">3-inch LCD, a 24.2MP sensor, </span><span class="se">\</span>
+<span class="s2">and interchangeable lenses. </span><span class="se">\</span>
+<span class="s2">The price is 599.99.</span>
+
+<span class="s2">For TVs and TV related products, we offer 3 TVs </span><span class="se">\</span>
+
+
+<span class="s2">All TVs offer HDR and Smart TV.</span>
+
+<span class="s2">The CineView 4K TV has vibrant colors and smart features. </span><span class="se">\</span>
+<span class="s2">Some of these features include a 55-inch display, </span><span class="se">\</span>
+<span class="s2">'4K resolution. It's priced at 599.</span>
+
+<span class="s2">The CineView 8K TV is a stunning 8K TV. </span><span class="se">\</span>
+<span class="s2">Some features include a 65-inch display and </span><span class="se">\</span>
+<span class="s2">8K resolution.  It's priced at 2999.99</span>
+
+<span class="s2">The CineView OLED TV lets you experience vibrant colors. </span><span class="se">\</span>
+<span class="s2">Some features include a 55-inch display and 4K resolution. </span><span class="se">\</span>
+<span class="s2">It's priced at 1499.99.</span>
+
+<span class="s2">We also offer 2 home theater products, both which include bluetooth.</span><span class="se">\</span>
+<span class="s2">The SoundMax Home Theater is a powerful home theater system for </span><span class="se">\</span>
+<span class="s2">an immmersive audio experience.</span>
+<span class="s2">Its features include 5.1 channel, 1000W output, and wireless subwoofer.</span>
+<span class="s2">It's priced at 399.99.</span>
+
+<span class="s2">The SoundMax Soundbar is a sleek and powerful soundbar.</span>
+<span class="s2">It's features include 2.1 channel, 300W output, and wireless subwoofer.</span>
+<span class="s2">It's priced at 199.99</span>
+
+<span class="s2">Are there any questions additional you may have about these products </span><span class="se">\</span>
+<span class="s2">that you mentioned here?</span>
+<span class="s2">Or may do you have other questions I can help you with?</span>
+<span class="s2">    """</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="check-if-the-llms-response-agrees-with-or-disagrees-with-the-expert-answer">Check if the LLM's response agrees with or disagrees with the expert answer</h3>
+<p>This evaluation prompt is from the <a href="https://github.com/openai/evals/blob/main/evals/registry/modelgraded/fact.yaml">OpenAI evals</a> project.</p>
+<p><a href="https://en.wikipedia.org/wiki/BLEU">BLEU score</a>: another way to evaluate whether two pieces of text are similar or not.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">eval_vs_ideal</span><span class="p">(</span><span class="n">test_set</span><span class="p">,</span> <span class="n">assistant_answer</span><span class="p">):</span>
+
+    <span class="n">cust_msg</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span><span class="s1">'customer_msg'</span><span class="p">]</span>
+    <span class="n">ideal</span> <span class="o">=</span> <span class="n">test_set</span><span class="p">[</span><span class="s1">'ideal_answer'</span><span class="p">]</span>
+    <span class="n">completion</span> <span class="o">=</span> <span class="n">assistant_answer</span>
+
+    <span class="n">system_message</span> <span class="o">=</span> <span class="s2">"""</span><span class="se">\</span>
+<span class="s2">    You are an assistant that evaluates how well the customer service agent </span><span class="se">\</span>
+<span class="s2">    answers a user question by comparing the response to the ideal (expert) response</span>
+<span class="s2">    Output a single letter and nothing else. </span>
+<span class="s2">    """</span>
+
+    <span class="n">user_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span><span class="se">\</span>
+<span class="s2">You are comparing a submitted answer to an expert answer on a given question. Here is the data:</span>
+<span class="s2">    [BEGIN DATA]</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Question]: </span><span class="si">{</span><span class="n">cust_msg</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Expert]: </span><span class="si">{</span><span class="n">ideal</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [Submission]: </span><span class="si">{</span><span class="n">completion</span><span class="si">}</span>
+<span class="s2">    ************</span>
+<span class="s2">    [END DATA]</span>
+
+<span class="s2">Compare the factual content of the submitted answer with the expert answer. Ignore any differences in style, grammar, or punctuation.</span>
+<span class="s2">    The submitted answer may either be a subset or superset of the expert answer, or it may conflict with it. Determine which case applies. Answer the question by selecting one of the following options:</span>
+<span class="s2">    (A) The submitted answer is a subset of the expert answer and is fully consistent with it.</span>
+<span class="s2">    (B) The submitted answer is a superset of the expert answer and is fully consistent with it.</span>
+<span class="s2">    (C) The submitted answer contains all the same details as the expert answer.</span>
+<span class="s2">    (D) There is a disagreement between the submitted answer and the expert answer.</span>
+<span class="s2">    (E) The answers differ, but these differences don't matter from the perspective of factuality.</span>
+<span class="s2">  choice_strings: ABCDE</span>
+<span class="s2">"""</span>
+
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span> <span class="s1">'system'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">system_message</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span> <span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">user_message</span><span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">assistant_answer</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Sure, I'd be happy to help! The SmartX ProPhone is a powerful smartphone with a 6.1-inch display, 128GB storage, 12MP dual camera, and 5G capabilities. The FotoSnap DSLR Camera is a versatile camera with a 24.2MP sensor, 1080p video, 3-inch LCD, and interchangeable lenses. As for TVs and TV-related products, we have a variety of options including the CineView 4K TV with a 55-inch display, HDR, and smart TV capabilities, the CineView 8K TV with an 8K resolution and a 65-inch display, and the CineView OLED TV with a 55-inch display and true blacks. We also have the SoundMax Home Theater system with a 5.1 channel and 1000W output, and the SoundMax Soundbar with a 2.1 channel and 300W output. Do you have any specific questions about these products or are you looking for any particular features?
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">eval_vs_ideal</span><span class="p">(</span><span class="n">test_set_ideal</span><span class="p">,</span> <span class="n">assistant_answer</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>'A'
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">assistant_answer_2</span> <span class="o">=</span> <span class="s2">"life is like a box of chocolates"</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">eval_vs_ideal</span><span class="p">(</span><span class="n">test_set_ideal</span><span class="p">,</span> <span class="n">assistant_answer_2</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>'D'
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ashish Kumar
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/ashishkrb7/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

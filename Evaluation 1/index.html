@@ -1,0 +1,1370 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Building Systems with the ChatGPT API">
+      
+      
+        <meta name="author" content="Ashish Kumar">
+      
+      
+      
+        <link rel="prev" href="../AI%20Assitant/">
+      
+      
+        <link rel="next" href="../Evaluation%202/">
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+    
+    
+      
+        <title>Evaluation 1 - Building Systems with the ChatGPT API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#evaluation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Building Systems with the ChatGPT API" class="md-header__button md-logo" aria-label="Building Systems with the ChatGPT API" data-md-component="logo">
+      
+  <img src="../images/chatgpt-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Building Systems with the ChatGPT API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Evaluation 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Language%20Models%2C%20the%20Chat%20Format%20and%20Tokens/" class="md-tabs__link">
+      ChatGPT usage
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Classification/" class="md-tabs__link">
+      Classification
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Prompt%20Injection/" class="md-tabs__link">
+      Prompt Injection
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Chain%20of%20Throught%20Reasoning/" class="md-tabs__link">
+      Chain of Throught Reasoning
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Chaining%20Prompts/" class="md-tabs__link">
+      Chaining Prompts
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Check%20Outputs/" class="md-tabs__link">
+      Check Outputs
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../AI%20Assitant/" class="md-tabs__link">
+      AI Assitant
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Evaluation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../contact/" class="md-tabs__link">
+      Contact
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Building Systems with the ChatGPT API" class="md-nav__button md-logo" aria-label="Building Systems with the ChatGPT API" data-md-component="logo">
+      
+  <img src="../images/chatgpt-logo.png" alt="logo">
+
+    </a>
+    Building Systems with the ChatGPT API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Language%20Models%2C%20the%20Chat%20Format%20and%20Tokens/" class="md-nav__link">
+        ChatGPT usage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Classification/" class="md-nav__link">
+        Classification
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prompt%20Injection/" class="md-nav__link">
+        Prompt Injection
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chain%20of%20Throught%20Reasoning/" class="md-nav__link">
+        Chain of Throught Reasoning
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chaining%20Prompts/" class="md-nav__link">
+        Chaining Prompts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Check%20Outputs/" class="md-nav__link">
+        Check Outputs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%20Assitant/" class="md-nav__link">
+        AI Assitant
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Evaluation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Evaluation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Evaluation 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Evaluation 1
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-the-api-key-and-relevant-python-libaries" class="md-nav__link">
+    Load the API key and relevant Python libaries.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-relevant-products-and-categories" class="md-nav__link">
+    Get the relevant products and categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-relevant-product-and-category-names-version-1" class="md-nav__link">
+    Find relevant product and category names (version 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-on-some-queries" class="md-nav__link">
+    Evaluate on some queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harder-test-cases" class="md-nav__link">
+    Harder test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-prompt-to-work-on-the-hard-test-cases" class="md-nav__link">
+    Modify the prompt to work on the hard test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-modified-prompt-on-the-hard-tests-cases" class="md-nav__link">
+    Evaluate the modified prompt on the hard tests cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-testing-verify-that-the-model-still-works-on-previous-test-cases" class="md-nav__link">
+    Regression testing: verify that the model still works on previous test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gather-development-set-for-automated-testing" class="md-nav__link">
+    Gather development set for automated testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-test-cases-by-comparing-to-the-ideal-answers" class="md-nav__link">
+    Evaluate test cases by comparing to the ideal answers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-evaluation-on-all-test-cases-and-calculate-the-fraction-of-cases-that-are-correct" class="md-nav__link">
+    Run evaluation on all test cases and calculate the fraction of cases that are correct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Evaluation%202/" class="md-nav__link">
+        Evaluation 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-the-api-key-and-relevant-python-libaries" class="md-nav__link">
+    Load the API key and relevant Python libaries.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-the-relevant-products-and-categories" class="md-nav__link">
+    Get the relevant products and categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-relevant-product-and-category-names-version-1" class="md-nav__link">
+    Find relevant product and category names (version 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-on-some-queries" class="md-nav__link">
+    Evaluate on some queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harder-test-cases" class="md-nav__link">
+    Harder test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-prompt-to-work-on-the-hard-test-cases" class="md-nav__link">
+    Modify the prompt to work on the hard test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-the-modified-prompt-on-the-hard-tests-cases" class="md-nav__link">
+    Evaluate the modified prompt on the hard tests cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-testing-verify-that-the-model-still-works-on-previous-test-cases" class="md-nav__link">
+    Regression testing: verify that the model still works on previous test cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gather-development-set-for-automated-testing" class="md-nav__link">
+    Gather development set for automated testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluate-test-cases-by-comparing-to-the-ideal-answers" class="md-nav__link">
+    Evaluate test cases by comparing to the ideal answers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-evaluation-on-all-test-cases-and-calculate-the-fraction-of-cases-that-are-correct" class="md-nav__link">
+    Run evaluation on all test cases and calculate the fraction of cases that are correct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="evaluation">Evaluation</h1>
+<p>Evaluate LLM responses when there is a single "right answer".</p>
+<h2 id="setup">Setup</h2>
+<h4 id="load-the-api-key-and-relevant-python-libaries">Load the API key and relevant Python libaries.</h4>
+<p>Some code that loads the OpenAI API key for you.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">openai</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>  <span class="c1"># GUI</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span> <span class="c1"># read local .env file</span>
+
+<span class="n">openai</span><span class="o">.</span><span class="n">api_type</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_type"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_base</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_base"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"api_version"</span><span class="p">)</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"OPENAI_API_KEY"</span><span class="p">)</span>
+</code></pre></div>
+<style>.bk-root, .bk-root .bk:before, .bk-root .bk:after {
+  font-family: var(--jp-ui-font-size1);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--jp-ui-font-color1);
+}
+</style>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"chatgpt-gpt35-turbo"</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_tokens</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">engine</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span> 
+        <span class="n">max_tokens</span><span class="o">=</span><span class="n">max_tokens</span><span class="p">,</span> 
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="get-the-relevant-products-and-categories">Get the relevant products and categories</h4>
+<p>Here is the list of products and categories that are in the product catalog.</p>
+<div class="highlight"><pre><span></span><code><span class="n">products_and_category</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">get_products_and_category</span><span class="p">()</span>
+<span class="n">products_and_category</span>
+</code></pre></div>
+<pre><code>{'Computers and Laptops': ['TechPro Ultrabook',
+  'BlueWave Gaming Laptop',
+  'PowerLite Convertible',
+  'TechPro Desktop',
+  'BlueWave Chromebook'],
+ 'Smartphones and Accessories': ['SmartX ProPhone',
+  'MobiTech PowerCase',
+  'SmartX MiniPhone',
+  'MobiTech Wireless Charger',
+  'SmartX EarBuds'],
+ 'Televisions and Home Theater Systems': ['CineView 4K TV',
+  'SoundMax Home Theater',
+  'CineView 8K TV',
+  'SoundMax Soundbar',
+  'CineView OLED TV'],
+ 'Gaming Consoles and Accessories': ['GameSphere X',
+  'ProGamer Controller',
+  'GameSphere Y',
+  'ProGamer Racing Wheel',
+  'GameSphere VR Headset'],
+ 'Audio Equipment': ['AudioPhonic Noise-Canceling Headphones',
+  'WaveSound Bluetooth Speaker',
+  'AudioPhonic True Wireless Earbuds',
+  'WaveSound Soundbar',
+  'AudioPhonic Turntable'],
+ 'Cameras and Camcorders': ['FotoSnap DSLR Camera',
+  'ActionCam 4K',
+  'FotoSnap Mirrorless Camera',
+  'ZoomMaster Camcorder',
+  'FotoSnap Instant Camera']}
+</code></pre>
+<h3 id="find-relevant-product-and-category-names-version-1">Find relevant product and category names (version 1)</h3>
+<p>This could be the version that is running in production.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_category_and_product_v1</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span><span class="n">products_and_category</span><span class="p">):</span>
+
+    <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">"####"</span>
+    <span class="n">system_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    You will be provided with customer service queries. </span><span class="se">\</span>
+<span class="s2">    The customer service query will be delimited with </span><span class="si">{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2"> characters.</span>
+<span class="s2">    Output a python list of json objects, where each object has the following format:</span>
+<span class="s2">        'category': &lt;one of Computers and Laptops, Smartphones and Accessories, Televisions and Home Theater Systems, </span><span class="se">\</span>
+<span class="s2">    Gaming Consoles and Accessories, Audio Equipment, Cameras and Camcorders&gt;,</span>
+<span class="s2">    AND</span>
+<span class="s2">        'products': &lt;a list of products that must be found in the allowed products below&gt;</span>
+
+
+<span class="s2">    Where the categories and products must be found in the customer service query.</span>
+<span class="s2">    If a product is mentioned, it must be associated with the correct category in the allowed products list below.</span>
+<span class="s2">    If no products or categories are found, output an empty list.</span>
+
+
+<span class="s2">    List out all products that are relevant to the customer service query based on how closely it relates</span>
+<span class="s2">    to the product name and product category.</span>
+<span class="s2">    Do not assume, from the name of the product, any features or attributes such as relative quality or price.</span>
+
+<span class="s2">    The allowed products are provided in JSON format.</span>
+<span class="s2">    The keys of each item represent the category.</span>
+<span class="s2">    The values of each item is a list of products that are within that category.</span>
+<span class="s2">    Allowed products: </span><span class="si">{</span><span class="n">products_and_category</span><span class="si">}</span>
+
+
+<span class="s2">    """</span>
+
+    <span class="n">few_shot_user_1</span> <span class="o">=</span> <span class="s2">"""I want the most expensive computer."""</span>
+    <span class="n">few_shot_assistant_1</span> <span class="o">=</span> <span class="s2">""" </span>
+<span class="s2">    [{'category': 'Computers and Laptops', </span><span class="se">\</span>
+<span class="s2">'products': ['TechPro Ultrabook', 'BlueWave Gaming Laptop', 'PowerLite Convertible', 'TechPro Desktop', 'BlueWave Chromebook']}]</span>
+<span class="s2">    """</span>
+
+    <span class="n">messages</span> <span class="o">=</span>  <span class="p">[</span>  
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'system'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">system_message</span><span class="p">},</span>    
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">delimiter</span><span class="si">}{</span><span class="n">few_shot_user_1</span><span class="si">}{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span>  
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'assistant'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">few_shot_assistant_1</span> <span class="p">},</span>
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">delimiter</span><span class="si">}{</span><span class="n">user_input</span><span class="si">}{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span>  
+    <span class="p">]</span> 
+    <span class="k">return</span> <span class="n">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="evaluate-on-some-queries">Evaluate on some queries</h3>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_0</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""Which TV can I buy if I'm on a budget?"""</span>
+
+<span class="n">products_by_category_0</span> <span class="o">=</span> <span class="n">find_category_and_product_v1</span><span class="p">(</span><span class="n">customer_msg_0</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_0</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Televisions and Home Theater Systems', 'products': ['CineView 4K TV', 'SoundMax Home Theater', 'CineView 8K TV', 'SoundMax Soundbar', 'CineView OLED TV']}]
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_1</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""I need a charger for my smartphone"""</span>
+
+<span class="n">products_by_category_1</span> <span class="o">=</span> <span class="n">find_category_and_product_v1</span><span class="p">(</span><span class="n">customer_msg_1</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_1</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Smartphones and Accessories', 'products': ['MobiTech PowerCase', 'MobiTech Wireless Charger', 'SmartX EarBuds']}]
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_2</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">What computers do you have?"""</span>
+
+<span class="n">products_by_category_2</span> <span class="o">=</span> <span class="n">find_category_and_product_v1</span><span class="p">(</span><span class="n">customer_msg_2</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="n">products_by_category_2</span>
+</code></pre></div>
+<pre><code>"    [{'category': 'Computers and Laptops', 'products': ['TechPro Ultrabook', 'BlueWave Gaming Laptop', 'PowerLite Convertible', 'TechPro Desktop', 'BlueWave Chromebook']}]"
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_3</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">tell me about the smartx pro phone and the fotosnap camera, the dslr one.</span>
+<span class="s2">Also, what TVs do you have?"""</span>
+
+<span class="n">products_by_category_3</span> <span class="o">=</span> <span class="n">find_category_and_product_v1</span><span class="p">(</span><span class="n">customer_msg_3</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_3</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Smartphones and Accessories', 'products': ['SmartX ProPhone']},
+     {'category': 'Cameras and Camcorders', 'products': ['FotoSnap DSLR Camera']},
+     {'category': 'Televisions and Home Theater Systems', 'products': ['CineView 4K TV', 'SoundMax Home Theater', 'CineView 8K TV', 'SoundMax Soundbar', 'CineView OLED TV']}]
+
+    Note: The query mentions "smartx pro phone" and "fotosnap camera, the dslr one", so the output includes the relevant categories and products. The query also asks about TVs, so the relevant category is included in the output.
+</code></pre>
+<h3 id="harder-test-cases">Harder test cases</h3>
+<p>Identify queries found in production, where the model is not working as expected.</p>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_4</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">tell me about the CineView TV, the 8K one, Gamesphere console, the X one.</span>
+<span class="s2">I'm on a budget, what computers do you have?"""</span>
+
+<span class="n">products_by_category_4</span> <span class="o">=</span> <span class="n">find_category_and_product_v1</span><span class="p">(</span><span class="n">customer_msg_4</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_4</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Televisions and Home Theater Systems', 'products': ['CineView 8K TV']},
+     {'category': 'Gaming Consoles and Accessories', 'products': ['GameSphere X']},
+     {'category': 'Computers and Laptops', 'products': ['BlueWave Chromebook']}]
+
+    Note: The CineView TV mentioned is the 8K one, and the Gamesphere console mentioned is the X one. 
+    For the computer category, since the customer mentioned being on a budget, we cannot determine which specific product to recommend. 
+    Therefore, we have included all the products in the Computers and Laptops category in the output.
+</code></pre>
+<h3 id="modify-the-prompt-to-work-on-the-hard-test-cases">Modify the prompt to work on the hard test cases</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_category_and_product_v2</span><span class="p">(</span><span class="n">user_input</span><span class="p">,</span><span class="n">products_and_category</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Added: Do not output any additional text that is not in JSON format.</span>
+<span class="sd">    Added a second example (for few-shot prompting) where user asks for </span>
+<span class="sd">    the cheapest computer. In both few-shot examples, the shown response </span>
+<span class="sd">    is the full list of products in JSON only.</span>
+<span class="sd">    """</span>
+    <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">"####"</span>
+    <span class="n">system_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">    You will be provided with customer service queries. </span><span class="se">\</span>
+<span class="s2">    The customer service query will be delimited with </span><span class="si">{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2"> characters.</span>
+<span class="s2">    Output a python list of json objects, where each object has the following format:</span>
+<span class="s2">        'category': &lt;one of Computers and Laptops, Smartphones and Accessories, Televisions and Home Theater Systems, </span><span class="se">\</span>
+<span class="s2">    Gaming Consoles and Accessories, Audio Equipment, Cameras and Camcorders&gt;,</span>
+<span class="s2">    AND</span>
+<span class="s2">        'products': &lt;a list of products that must be found in the allowed products below&gt;</span>
+<span class="s2">    Do not output any additional text that is not in JSON format.</span>
+<span class="s2">    Do not write any explanatory text after outputting the requested JSON.</span>
+
+
+<span class="s2">    Where the categories and products must be found in the customer service query.</span>
+<span class="s2">    If a product is mentioned, it must be associated with the correct category in the allowed products list below.</span>
+<span class="s2">    If no products or categories are found, output an empty list.</span>
+
+
+<span class="s2">    List out all products that are relevant to the customer service query based on how closely it relates</span>
+<span class="s2">    to the product name and product category.</span>
+<span class="s2">    Do not assume, from the name of the product, any features or attributes such as relative quality or price.</span>
+
+<span class="s2">    The allowed products are provided in JSON format.</span>
+<span class="s2">    The keys of each item represent the category.</span>
+<span class="s2">    The values of each item is a list of products that are within that category.</span>
+<span class="s2">    Allowed products: </span><span class="si">{</span><span class="n">products_and_category</span><span class="si">}</span>
+
+
+<span class="s2">    """</span>
+
+    <span class="n">few_shot_user_1</span> <span class="o">=</span> <span class="s2">"""I want the most expensive computer. What do you recommend?"""</span>
+    <span class="n">few_shot_assistant_1</span> <span class="o">=</span> <span class="s2">""" </span>
+<span class="s2">    [{'category': 'Computers and Laptops', </span><span class="se">\</span>
+<span class="s2">'products': ['TechPro Ultrabook', 'BlueWave Gaming Laptop', 'PowerLite Convertible', 'TechPro Desktop', 'BlueWave Chromebook']}]</span>
+<span class="s2">    """</span>
+
+    <span class="n">few_shot_user_2</span> <span class="o">=</span> <span class="s2">"""I want the most cheapest computer. What do you recommend?"""</span>
+    <span class="n">few_shot_assistant_2</span> <span class="o">=</span> <span class="s2">""" </span>
+<span class="s2">    [{'category': 'Computers and Laptops', </span><span class="se">\</span>
+<span class="s2">'products': ['TechPro Ultrabook', 'BlueWave Gaming Laptop', 'PowerLite Convertible', 'TechPro Desktop', 'BlueWave Chromebook']}]</span>
+<span class="s2">    """</span>
+
+    <span class="n">messages</span> <span class="o">=</span>  <span class="p">[</span>  
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'system'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">system_message</span><span class="p">},</span>    
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">delimiter</span><span class="si">}{</span><span class="n">few_shot_user_1</span><span class="si">}{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span>  
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'assistant'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">few_shot_assistant_1</span> <span class="p">},</span>
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">delimiter</span><span class="si">}{</span><span class="n">few_shot_user_2</span><span class="si">}{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span>  
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'assistant'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="n">few_shot_assistant_2</span> <span class="p">},</span>
+    <span class="p">{</span><span class="s1">'role'</span><span class="p">:</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'content'</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">delimiter</span><span class="si">}{</span><span class="n">user_input</span><span class="si">}{</span><span class="n">delimiter</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span>  
+    <span class="p">]</span> 
+    <span class="k">return</span> <span class="n">get_completion_from_messages</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="evaluate-the-modified-prompt-on-the-hard-tests-cases">Evaluate the modified prompt on the hard tests cases</h3>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_3</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">tell me about the smartx pro phone and the fotosnap camera, the dslr one.</span>
+<span class="s2">Also, what TVs do you have?"""</span>
+
+<span class="n">products_by_category_3</span> <span class="o">=</span> <span class="n">find_category_and_product_v2</span><span class="p">(</span><span class="n">customer_msg_3</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_3</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Smartphones and Accessories', 'products': ['SmartX ProPhone']}, {'category': 'Cameras and Camcorders', 'products': ['FotoSnap DSLR Camera']}, {'category': 'Televisions and Home Theater Systems', 'products': ['CineView 4K TV', 'SoundMax Home Theater', 'CineView 8K TV', 'SoundMax Soundbar', 'CineView OLED TV']}]
+</code></pre>
+<h3 id="regression-testing-verify-that-the-model-still-works-on-previous-test-cases">Regression testing: verify that the model still works on previous test cases</h3>
+<p>Check that modifying the model to fix the hard test cases does not negatively affect its performance on previous test cases.</p>
+<div class="highlight"><pre><span></span><code><span class="n">customer_msg_0</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""Which TV can I buy if I'm on a budget?"""</span>
+
+<span class="n">products_by_category_0</span> <span class="o">=</span> <span class="n">find_category_and_product_v2</span><span class="p">(</span><span class="n">customer_msg_0</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">products_by_category_0</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>    [{'category': 'Televisions and Home Theater Systems', 'products': ['CineView 4K TV', 'SoundMax Home Theater', 'CineView 8K TV', 'SoundMax Soundbar', 'CineView OLED TV']}]
+</code></pre>
+<h3 id="gather-development-set-for-automated-testing">Gather development set for automated testing</h3>
+<div class="highlight"><pre><span></span><code><span class="n">msg_ideal_pairs_set</span> <span class="o">=</span> <span class="p">[</span>
+
+    <span class="c1"># eg 0</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="s2">"""Which TV can I buy if I'm on a budget?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Televisions and Home Theater Systems'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'CineView 4K TV'</span><span class="p">,</span> <span class="s1">'SoundMax Home Theater'</span><span class="p">,</span> <span class="s1">'CineView 8K TV'</span><span class="p">,</span> <span class="s1">'SoundMax Soundbar'</span><span class="p">,</span> <span class="s1">'CineView OLED TV'</span><span class="p">]</span>
+        <span class="p">)}</span>
+    <span class="p">},</span>
+
+    <span class="c1"># eg 1</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="s2">"""I need a charger for my smartphone"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Smartphones and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'MobiTech PowerCase'</span><span class="p">,</span> <span class="s1">'MobiTech Wireless Charger'</span><span class="p">,</span> <span class="s1">'SmartX EarBuds'</span><span class="p">]</span>
+        <span class="p">)}</span>
+    <span class="p">},</span>
+    <span class="c1"># eg 2</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""What computers do you have?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+           <span class="s1">'Computers and Laptops'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+               <span class="p">[</span><span class="s1">'TechPro Ultrabook'</span><span class="p">,</span> <span class="s1">'BlueWave Gaming Laptop'</span><span class="p">,</span> <span class="s1">'PowerLite Convertible'</span><span class="p">,</span> <span class="s1">'TechPro Desktop'</span><span class="p">,</span> <span class="s1">'BlueWave Chromebook'</span>
+               <span class="p">])</span>
+                <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="c1"># eg 3</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""tell me about the smartx pro phone and </span><span class="se">\</span>
+<span class="s2">    the fotosnap camera, the dslr one.</span><span class="se">\</span>
+<span class="s2">    Also, what TVs do you have?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Smartphones and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'SmartX ProPhone'</span><span class="p">]),</span>
+        <span class="s1">'Cameras and Camcorders'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'FotoSnap DSLR Camera'</span><span class="p">]),</span>
+        <span class="s1">'Televisions and Home Theater Systems'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'CineView 4K TV'</span><span class="p">,</span> <span class="s1">'SoundMax Home Theater'</span><span class="p">,</span><span class="s1">'CineView 8K TV'</span><span class="p">,</span> <span class="s1">'SoundMax Soundbar'</span><span class="p">,</span> <span class="s1">'CineView OLED TV'</span><span class="p">])</span>
+        <span class="p">}</span>
+    <span class="p">},</span> 
+
+    <span class="c1"># eg 4</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="s2">"""tell me about the CineView TV, the 8K one, Gamesphere console, the X one.</span>
+<span class="s2">I'm on a budget, what computers do you have?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Televisions and Home Theater Systems'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'CineView 8K TV'</span><span class="p">]),</span>
+        <span class="s1">'Gaming Consoles and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'GameSphere X'</span><span class="p">]),</span>
+        <span class="s1">'Computers and Laptops'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'TechPro Ultrabook'</span><span class="p">,</span> <span class="s1">'BlueWave Gaming Laptop'</span><span class="p">,</span> <span class="s1">'PowerLite Convertible'</span><span class="p">,</span> <span class="s1">'TechPro Desktop'</span><span class="p">,</span> <span class="s1">'BlueWave Chromebook'</span><span class="p">])</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="c1"># eg 5</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""What smartphones do you have?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+           <span class="s1">'Smartphones and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+               <span class="p">[</span><span class="s1">'SmartX ProPhone'</span><span class="p">,</span> <span class="s1">'MobiTech PowerCase'</span><span class="p">,</span> <span class="s1">'SmartX MiniPhone'</span><span class="p">,</span> <span class="s1">'MobiTech Wireless Charger'</span><span class="p">,</span> <span class="s1">'SmartX EarBuds'</span>
+               <span class="p">])</span>
+                    <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="c1"># eg 6</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""I'm on a budget.  Can you recommend some smartphones to me?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Smartphones and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">(</span>
+            <span class="p">[</span><span class="s1">'SmartX EarBuds'</span><span class="p">,</span> <span class="s1">'SmartX MiniPhone'</span><span class="p">,</span> <span class="s1">'MobiTech PowerCase'</span><span class="p">,</span> <span class="s1">'SmartX ProPhone'</span><span class="p">,</span> <span class="s1">'MobiTech Wireless Charger'</span><span class="p">]</span>
+        <span class="p">)}</span>
+    <span class="p">},</span>
+
+    <span class="c1"># eg 7 # this will output a subset of the ideal answer</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""What Gaming consoles would be good for my friend who is into racing games?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:{</span>
+        <span class="s1">'Gaming Consoles and Accessories'</span><span class="p">:</span><span class="nb">set</span><span class="p">([</span>
+            <span class="s1">'GameSphere X'</span><span class="p">,</span>
+            <span class="s1">'ProGamer Controller'</span><span class="p">,</span>
+            <span class="s1">'GameSphere Y'</span><span class="p">,</span>
+            <span class="s1">'ProGamer Racing Wheel'</span><span class="p">,</span>
+            <span class="s1">'GameSphere VR Headset'</span>
+     <span class="p">])}</span>
+    <span class="p">},</span>
+    <span class="c1"># eg 8</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""What could be a good present for my videographer friend?"""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'Cameras and Camcorders'</span><span class="p">:</span><span class="nb">set</span><span class="p">([</span>
+        <span class="s1">'FotoSnap DSLR Camera'</span><span class="p">,</span> <span class="s1">'ActionCam 4K'</span><span class="p">,</span> <span class="s1">'FotoSnap Mirrorless Camera'</span><span class="p">,</span> <span class="s1">'ZoomMaster Camcorder'</span><span class="p">,</span> <span class="s1">'FotoSnap Instant Camera'</span>
+        <span class="p">])}</span>
+    <span class="p">},</span>
+
+    <span class="c1"># eg 9</span>
+    <span class="p">{</span><span class="s1">'customer_msg'</span><span class="p">:</span><span class="sa">f</span><span class="s2">"""I would like a hot tub time machine."""</span><span class="p">,</span>
+     <span class="s1">'ideal_answer'</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="evaluate-test-cases-by-comparing-to-the-ideal-answers">Evaluate test cases by comparing to the ideal answers</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">def</span> <span class="nf">eval_response_with_ideal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span>
+                              <span class="n">ideal</span><span class="p">,</span>
+                              <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"response"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+    <span class="c1"># json.loads() expects double quotes, not single quotes</span>
+    <span class="n">json_like_str</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"'"</span><span class="p">,</span><span class="s1">'"'</span><span class="p">)</span>
+
+    <span class="c1"># parse into a list of dictionaries</span>
+    <span class="n">l_of_d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_like_str</span><span class="p">)</span>
+
+    <span class="c1"># special case when response is empty list</span>
+    <span class="k">if</span> <span class="n">l_of_d</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">and</span> <span class="n">ideal</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="c1"># otherwise, response is empty </span>
+    <span class="c1"># or ideal should be empty, there's a mismatch</span>
+    <span class="k">elif</span> <span class="n">l_of_d</span> <span class="o">==</span> <span class="p">[]</span> <span class="ow">or</span> <span class="n">ideal</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>    
+
+    <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"l_of_d is"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">l_of_d</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">l_of_d</span><span class="p">:</span>
+
+        <span class="n">cat</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'category'</span><span class="p">)</span>
+        <span class="n">prod_l</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'products'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cat</span> <span class="ow">and</span> <span class="n">prod_l</span><span class="p">:</span>
+            <span class="c1"># convert list to set for comparison</span>
+            <span class="n">prod_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">prod_l</span><span class="p">)</span>
+            <span class="c1"># get ideal set of products</span>
+            <span class="n">ideal_cat</span> <span class="o">=</span> <span class="n">ideal</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ideal_cat</span><span class="p">:</span>
+                <span class="n">prod_set_ideal</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ideal</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cat</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"did not find category </span><span class="si">{</span><span class="n">cat</span><span class="si">}</span><span class="s2"> in ideal"</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ideal: </span><span class="si">{</span><span class="n">ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"prod_set</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="n">prod_set</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"prod_set_ideal</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="n">prod_set_ideal</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">prod_set</span> <span class="o">==</span> <span class="n">prod_set_ideal</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"correct"</span><span class="p">)</span>
+                <span class="n">correct</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"incorrect"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"prod_set: </span><span class="si">{</span><span class="n">prod_set</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"prod_set_ideal: </span><span class="si">{</span><span class="n">prod_set_ideal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">prod_set</span> <span class="o">&lt;=</span> <span class="n">prod_set_ideal</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"response is a subset of the ideal answer"</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">prod_set</span> <span class="o">&gt;=</span> <span class="n">prod_set_ideal</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">"response is a superset of the ideal answer"</span><span class="p">)</span>
+
+    <span class="c1"># count correct over total number of items in list</span>
+    <span class="n">pc_correct</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">l_of_d</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pc_correct</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Customer message: </span><span class="si">{</span><span class="n">msg_ideal_pairs_set</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="s2">"customer_msg"</span><span class="p">]</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Ideal answer: </span><span class="si">{</span><span class="n">msg_ideal_pairs_set</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="s2">"ideal_answer"</span><span class="p">]</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Customer message: What Gaming consoles would be good for my friend who is into racing games?
+Ideal answer: {'Gaming Consoles and Accessories': {'ProGamer Racing Wheel', 'GameSphere VR Headset', 'ProGamer Controller', 'GameSphere X', 'GameSphere Y'}}
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">find_category_and_product_v2</span><span class="p">(</span><span class="n">msg_ideal_pairs_set</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="s2">"customer_msg"</span><span class="p">],</span>
+                                         <span class="n">products_and_category</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Resonse: </span><span class="si">{</span><span class="n">response</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">eval_response_with_ideal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span>
+                              <span class="n">msg_ideal_pairs_set</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="s2">"ideal_answer"</span><span class="p">])</span>
+</code></pre></div>
+<pre><code>Resonse:     [{'category': 'Gaming Consoles and Accessories', 'products': ['ProGamer Controller', 'ProGamer Racing Wheel', 'GameSphere VR Headset']}]
+incorrect
+prod_set: {'ProGamer Controller', 'ProGamer Racing Wheel', 'GameSphere VR Headset'}
+prod_set_ideal: {'ProGamer Racing Wheel', 'GameSphere VR Headset', 'ProGamer Controller', 'GameSphere X', 'GameSphere Y'}
+response is a subset of the ideal answer
+
+
+
+
+
+0.0
+</code></pre>
+<h3 id="run-evaluation-on-all-test-cases-and-calculate-the-fraction-of-cases-that-are-correct">Run evaluation on all test cases and calculate the fraction of cases that are correct</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Note, this will not work if any of the api calls time out</span>
+<span class="n">score_accum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pair</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">msg_ideal_pairs_set</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"example </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="n">customer_msg</span> <span class="o">=</span> <span class="n">pair</span><span class="p">[</span><span class="s1">'customer_msg'</span><span class="p">]</span>
+    <span class="n">ideal</span> <span class="o">=</span> <span class="n">pair</span><span class="p">[</span><span class="s1">'ideal_answer'</span><span class="p">]</span>
+
+    <span class="c1"># print("Customer message",customer_msg)</span>
+    <span class="c1"># print("ideal:",ideal)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">find_category_and_product_v2</span><span class="p">(</span><span class="n">customer_msg</span><span class="p">,</span>
+                                                      <span class="n">products_and_category</span><span class="p">)</span>
+
+
+    <span class="c1"># print("products_by_category",products_by_category)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">eval_response_with_ideal</span><span class="p">(</span><span class="n">response</span><span class="p">,</span><span class="n">ideal</span><span class="p">,</span><span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">score_accum</span> <span class="o">+=</span> <span class="n">score</span>
+
+
+<span class="n">n_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg_ideal_pairs_set</span><span class="p">)</span>
+<span class="n">fraction_correct</span> <span class="o">=</span> <span class="n">score_accum</span> <span class="o">/</span> <span class="n">n_examples</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Fraction correct out of </span><span class="si">{</span><span class="n">n_examples</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">fraction_correct</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>example 0
+0: 1.0
+example 1
+1: 1.0
+example 2
+2: 1.0
+example 3
+3: 1.0
+example 4
+4: 1.0
+example 5
+5: 1.0
+example 6
+6: 1.0
+example 7
+incorrect
+prod_set: {'ProGamer Controller', 'ProGamer Racing Wheel', 'GameSphere VR Headset'}
+prod_set_ideal: {'ProGamer Racing Wheel', 'GameSphere VR Headset', 'ProGamer Controller', 'GameSphere X', 'GameSphere Y'}
+response is a subset of the ideal answer
+7: 0.0
+example 8
+8: 1.0
+example 9
+9: 1
+Fraction correct out of 10: 0.9
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Ashish Kumar
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/ashishkrb7/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
