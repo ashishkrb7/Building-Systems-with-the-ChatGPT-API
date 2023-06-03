@@ -13,6 +13,9 @@ nav:
   - Chaining Prompts : Chaining Prompts.md
   - Check Outputs : Check Outputs.md
   - AI Assitant : AI Assitant.md
+  - Evaluation :
+    - Evaluation 1 : Evaluation 1.md
+    - Evaluation 2 : Evaluation 2.md
   - Contact: contact.md
 
 theme:
